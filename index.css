@@ -1,0 +1,208 @@
+:root {
+  --clr-primary-100: hsl(158, 36%, 37%);
+  --clr-primary-400: hsl(30, 38%, 92%);
+  --clr-neutral-100: hsl(212, 21%, 14%);
+  --clr-neutral-400: hsl(228, 12%, 48%);
+  --clr-neutral-700: hsl(0, 0%, 100%);
+  --bg-primary-100: hsl(158, 36%, 37%);
+  --bg-primary-400: hsl(30, 38%, 92%);
+  --bg-neutral-100: hsl(212, 21%, 14%);
+  --bg-neutral-400: hsl(228, 12%, 48%);
+  --bg-neutral-700: hsl(0, 0%, 100%);
+  --size-100: 0.5rem;
+  --size-300: 1rem;
+  --size-500: 1.5rem;
+  --size-700: 2rem;
+  --ff-primary: "Fraunces", serif;
+  --ff-secondary: "Montserrat", sans-serif;
+  --fw-normal: 500;
+  --fw-bold: 700;
+  --flex: flex;
+}
+
+/* Color panel */
+.clr-primary-100 {
+  color: var(--clr-primary-100);
+}
+
+.clr-primary-400 {
+  color: var(--clr-primary-400);
+}
+
+.clr-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+.clr-neutral-400 {
+  color: var(--clr-neutral-400);
+}
+
+.clr-neutral-700 {
+  color: var(--clr-neutral-700);
+}
+
+/* Background color panel*/
+.bg-primary-100 {
+  background-color: var(--bg-primary-100);
+}
+
+.bg-primary-400 {
+  background-color: var(--bg-primary-400);
+}
+
+.bg-neutral-100 {
+  background-color: var(--bg-neutral-100);
+}
+
+.bg-neutral-400 {
+  background-color: var(--bg-neutral-400);
+}
+
+.bg-neutral-700 {
+  background-color: var(--bg-neutral-700);
+}
+
+/* Font Family */
+.ff-primary {
+  font-family: var(--ff-primary);
+}
+
+.ff-secondary {
+  font-family: var(--ff-secondary);
+}
+
+/* Font Weight */
+.fw-normal {
+  font-weight: var(--fw-normal);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+/* Font Size */
+.fz-100 {
+  font-size: var(--size-100);
+}
+
+.fz-300 {
+  font-size: var(--size-300);
+}
+
+.fz-500 {
+  font-size: var(--size-500);
+}
+
+.fz-700 {
+  font-size: var(--size-700);
+}
+
+/* Flex propriety */
+.flex {
+  display: var(--flex);
+}
+
+.flex-center {
+  display: var(--flex);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Reset CSS */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
+img, picture, svg {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Container */
+body .container {
+  width: 50%;
+  max-height: 60%;
+  display: flex;
+}
+body .container .main {
+  border-radius: 10px;
+  flex: 1;
+}
+body .container .main .image-desktop {
+  max-height: 100%;
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+}
+body .container .main .image-mobile {
+  display: none;
+}
+body .container .side {
+  max-height: 100%;
+  width: 100%;
+  border-radius: 0 10px 10px 0;
+  flex: 1;
+  padding: var(--size-500);
+}
+body .container .side .side-div {
+  padding: var(--size-300);
+}
+body .container .side .side-div * {
+  padding: var(--size-100);
+}
+body .container .side .side-div .price {
+  align-items: center;
+  justify-content: left;
+  gap: var(--size-300);
+}
+body .container .side .side-div .original-price {
+  text-decoration: line-through;
+}
+body .container .side .side-div .button {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--bg-neutral-700);
+}
+body .container .side .side-div .button:hover {
+  background-color: hsl(158, 36%, 32%);
+}
+
+/* Media Query */
+@media (max-width: 375px) {
+  body .container {
+    width: 90%;
+    height: 100%;
+    transform: translateY(-90px);
+    flex-direction: column;
+  }
+  body .container .main .image-desktop {
+    display: none;
+  }
+  body .container .main .image-mobile {
+    display: block;
+    border-radius: 10px 10px 0 0;
+  }
+  body .container .side {
+    border-radius: 0 0 10px 10px;
+  }
+}/*# sourceMappingURL=index.css.map */
